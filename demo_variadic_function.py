@@ -4,13 +4,16 @@
 # Description: This script will demo HOWTO match strings/data using
 # str testing and pattern matching using the RE module
 """
-    DocString
+    Collection of tools to search for Regex Patterns in files
 """
 import re
 
 # Example of a Variadic function that allows
 # variable number of parameters (TUPLE)
 def search_pattern(pattern=r"^.{19}$", *files):
+    """ Search for Regex patterns in multiple files and
+        return number of lines matched
+    """
     lines = 0
     reobj = re.compile(pattern)  # Compile PATTERN only ONCE
     for file in files:
