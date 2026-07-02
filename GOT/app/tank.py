@@ -53,3 +53,8 @@ class Tank(vehicle.Vehicle):
 
     # Wrapping getter+setter with a ONE variable name interface
     tank_health = property(get_health, set_health)
+
+    def __del__(self):
+        # Destructor - executes when each object is deleted.
+        print("Boom..boom..boom")
+        return None
